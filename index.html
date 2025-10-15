@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV - Desarrollador Web Innovador y Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Foto de Luana Villegas" class="header-image">
+        <h1>Luana Villegas</h1>
+        <p>Desarrollador Web Junior</p>
+    </header>
+
+    <nav class="nav-menu">
+        <button onclick="openModal('modalAcercaDeMi')"><i class="fas fa-user"></i>Acerca de mí</button>
+        <button onclick="openModal('modalConocimientos')"><i class="fas fa-code"></i>Conocimientos</button>
+        <button onclick="openModal('modalFormacion')"><i class="fas fa-graduation-cap"></i>Formación Académica</button>
+        <button onclick="openModal('modalIdiomas')"><i class="fas fa-globe"></i>Idiomas</button>
+        <button onclick="openModal('modalProyectos')"><i class="fas fa-project-diagram"></i>Proyectos</button>
+    </nav>
+
+    <div id="modalAcercaDeMi" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modalAcercaDeMi')">&times; Volver</span>
+            <h2>Acerca de mí</h2>
+            <p>Tengo 17 años, Estudiante técnico en informática, responsable y proactivo, con conocimientos en redes, electrónica y mantenimiento de PC.</p>
+            <p><strong>Teléfono:</strong> 1136295342</p>
+            <p><strong>Email:</strong> Luanavillegas09@gmail.com</p>
+            <p><strong>Dirección:</strong> Calle 18 2536, Berazategui, Buenos Aires</p>
+        </div>
+    </div>
+
+    <div id="modalConocimientos" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modalConocimientos')">&times; Volver</span>
+            <h2>Conocimientos</h2>
+            <div class="sub-buttons">
+                <button onclick="showSubModal('subModalDesarrolladorWeb')"><i class="fas fa-web"></i>Desarrollador Web</button>
+                <button onclick="showSubModal('subModalSimulacionRedes')"><i class="fas fa-network-wired"></i>Simulación de Redes</button>
+                <button onclick="showSubModal('subModalMantenimientoPC')"><i class="fas fa-tools"></i>Mantenimiento de PC</button>
+                <button onclick="showSubModal('subModalElectronicaBasica')"><i class="fas fa-microchip"></i>Electrónica Básica</button>
+            </div>
+            <div id="subModalDesarrolladorWeb" class="sub-modal">
+                <h3>Desarrollador Web</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVA SCRIPT</li>
+                    <li>REACT</li>
+                </ul>
+            </div>
+            <div id="subModalSimulacionRedes" class="sub-modal">
+                <h3>Simulación de Redes con Packet Tracer</h3>
+                <ul>
+                    <li>Diseño y Configuración Básica de Redes</li>
+                    <li>Manejo de Topologías de Red y Dispositivos</li>
+                    <li>Conocimiento Básico de Direccionamiento IP</li>
+                </ul>
+            </div>
+            <div id="subModalMantenimientoPC" class="sub-modal">
+                <h3>Mantenimiento y Reparación de PC</h3>
+                <ul>
+                    <li>Mantenimiento Preventivo</li>
+                    <li>Reparación y Armado de Computadoras</li>
+                    <li>Diagnóstico y Solución de Fallas de Hardware</li>
+                    <li>Conocimiento de Componentes Internos de la CPU</li>
+                    <li>Instalación y Configuración Básica de Sistemas Operativos</li>
+                    <li>Armado de Cables de Red</li>
+                </ul>
+            </div>
+            <div id="subModalElectronicaBasica" class="sub-modal">
+                <h3>Electrónica Básica</h3>
+                <ul>
+                    <li>Manejo de Componentes Electrónicos</li>
+                    <li>Armado de Circuitos Simples con Protoboard</li>
+                    <li>Armado y Conexión de Cables de Alimentación y Señal</li>
+                    <li>Identificación de Pines y Conectores</li>
+                    <li>Uso de Herramientas de Cableado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalFormacion" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modalFormacion')">&times; Volver</span>
+            <h2>Formación Académica</h2>
+            <h3>Colegio Florentino Ameghino</h3>
+            <p>2014-Actualidad: Primaria completa, Secundaria en curso</p>
+            <h3>Instituto Interlinks</h3>
+            <p>2023-Actualidad: Inglés - Crash 2</p>
+        </div>
+    </div>
+
+    <div id="modalIdiomas" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modalIdiomas')">&times; Volver</span>
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español: Nativo</li>
+                <li>Inglés: Nivel intermedio</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modalProyectos" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modalProyectos')">&times; Volver</span>
+            <h2>Proyectos</h2>
+            <p>Aquí muestro proyectos innovadores basados en mis habilidades. ¡Visita mi GitHub! <a href="https://github.com/tu-usuario" target="_blank">GitHub</a></p>
+            <ul>
+                <li><strong>Proyecto 1:</strong> Aplicación de billetera virtual con React.</li>
+                <li><strong>Proyecto 2:</strong> Simulador de redes con JavaScript.</li>
+                <li><strong>Proyecto 3:</strong> Dashboard de mantenimiento PC.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
